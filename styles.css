@@ -1,0 +1,35 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.overlay {
+    background-image: url('https://via.placeholder.com/1920x1080'); 
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.content {
+    background-color: rgba(255, 0, 0, 0.4);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
