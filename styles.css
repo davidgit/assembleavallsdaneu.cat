@@ -2,6 +2,7 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: 'Arial', sans-serif;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .overlay {
@@ -17,7 +18,7 @@ body, html {
 }
 
 .content {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 0, 0, 0.4);
     padding: 30px;
     border-radius: 10px;
 }
