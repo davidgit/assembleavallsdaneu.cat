@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrossada Popular – Inscripció | Assemblea Popular de les Valls d'Àneu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: #f5ede0;
+            color: #1a1a1a;
+            font-family: 'Oswald', sans-serif;
+            min-height: 100vh;
+            padding: 2rem 1rem 4rem;
+        }
+
+        .page-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ── Header ── */
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .label-top {
+            display: inline-block;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 4px;
+            background: #1a1a1a;
+            color: #f5ede0;
+            padding: 4px 18px;
+            margin-bottom: 0.4rem;
+        }
+
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3rem, 12vw, 5.5rem);
+            line-height: 0.9;
+            color: #c0281e;
+            text-shadow: 4px 4px 0 #1a1a1a;
+            margin-bottom: 0.3rem;
+        }
+
+        .subtitle {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(1.2rem, 5vw, 1.8rem);
+            letter-spacing: 3px;
+            color: #1a1a1a;
+        }
+
+        .event-info {
+            background: #c0281e;
+            color: #f5ede0;
+            border: 3px solid #1a1a1a;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+
+        .event-info p {
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            line-height: 1.8;
+        }
+
+        .event-info strong {
+            font-size: 1.15rem;
+        }
+
+        /* ── Form card ── */
+        .form-card {
+            background: #fff;
+            border: 3px solid #1a1a1a;
+            box-shadow: 6px 6px 0 #1a1a1a;
+            padding: 2rem 1.75rem;
+        }
+
+        .form-card h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            color: #c0281e;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #1a1a1a;
+            padding-bottom: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 0.4rem;
+            color: #1a1a1a;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.7rem 0.9rem;
+            border: 2px solid #1a1a1a;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1rem;
+            background: #f5ede0;
+            color: #1a1a1a;
+            appearance: none;
+            -webkit-appearance: none;
+            border-radius: 0;
+            outline: none;
+            transition: border-color 0.15s, box-shadow 0.15s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #c0281e;
+            box-shadow: 3px 3px 0 #c0281e;
+        }
+
+        .select-wrapper {
+            position: relative;
+        }
+
+        .select-wrapper::after {
+            content: '▾';
+            position: absolute;
+            right: 0.9rem;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            font-size: 1rem;
+            color: #1a1a1a;
+        }
+
+        /* vegetarian highlight */
+        .vege-box {
+            background: #f5ede0;
+            border: 2px dashed #c0281e;
+            padding: 1rem 1.25rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .vege-box label {
+            color: #c0281e;
+        }
+
+        .vege-hint {
+            font-size: 0.78rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            color: #666;
+            margin-top: 0.35rem;
+            text-transform: none;
+        }
+
+        /* radio group */
+        .radio-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+        }
+
+        .radio-option input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c0281e;
+            cursor: pointer;
+        }
+
+        .radio-option span {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        /* price note */
+        .price-note {
+            background: #1a1a1a;
+            color: #f5ede0;
+            padding: 0.75rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .price-note strong {
+            font-size: 1.1rem;
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 2px;
+        }
+
+        /* bring reminder */
+        .bring-note {
+            background: #fff8e1;
+            border: 2px solid #1a1a1a;
+            padding: 0.75rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+        }
+
+        /* submit */
+        button[type="submit"] {
+            width: 100%;
+            padding: 1rem;
+            background: #c0281e;
+            color: #f5ede0;
+            border: 3px solid #1a1a1a;
+            box-shadow: 4px 4px 0 #1a1a1a;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.6rem;
+            letter-spacing: 3px;
+            cursor: pointer;
+            transition: transform 0.1s, box-shadow 0.1s;
+        }
+
+        button[type="submit"]:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0 #1a1a1a;
+        }
+
+        button[type="submit"]:active {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0 #1a1a1a;
+        }
+
+        /* success page (shown after Netlify redirect) */
+        .success-banner {
+            display: none;
+            background: #c0281e;
+            color: #f5ede0;
+            border: 3px solid #1a1a1a;
+            box-shadow: 6px 6px 0 #1a1a1a;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .success-banner h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+        }
+
+        .success-banner p {
+            font-size: 1rem;
+            margin-top: 0.75rem;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2.5rem;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            color: #666;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+
+        <header>
+            <div class="label-top">Assemblea Popular de les Valls d'Àneu</div>
+            <h1>ARROSSADA<br>POPULAR</h1>
+            <div class="subtitle">Firal d'Esterri &mdash; 23 de Maig</div>
+        </header>
+
+        <div class="event-info">
+            <p>
+                <strong>A partir de les 12:30h</strong><br>
+                Aperitiu · Arròs · Postres · Vi i Aigua<br>
+                <strong>15 € per persona &mdash; només efectiu</strong><br>
+                Vermut electrònic · Festa PD's
+            </p>
+        </div>
+
+        <div class="form-card">
+            <h2>Inscripció</h2>
+
+            <form name="arrossada" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/arrossada-ok.html">
+                <input type="hidden" name="form-name" value="arrossada" />
+                <p hidden><label>No omplir: <input name="bot-field" /></label></p>
+
+                <div class="form-group">
+                    <label for="nom">Nom i cognoms</label>
+                    <input type="text" id="nom" name="nom" placeholder="Pere Puig" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="telefon">Telèfon de contacte</label>
+                    <input type="tel" id="telefon" name="telefon" placeholder="600 000 000" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correu electrònic</label>
+                    <input type="email" id="email" name="email" placeholder="nom@exemple.cat" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="persones">Nombre de persones</label>
+                    <div class="select-wrapper">
+                        <select id="persones" name="persones" required>
+                            <option value="" disabled selected>Selecciona…</option>
+                            <option value="1">1 persona</option>
+                            <option value="2">2 persones</option>
+                            <option value="3">3 persones</option>
+                            <option value="4">4 persones</option>
+                            <option value="5">5 persones</option>
+                            <option value="6">6 persones</option>
+                            <option value="7">7 persones</option>
+                            <option value="8">8 persones</option>
+                            <option value="9">9 persones</option>
+                            <option value="10">10 persones</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="vege-box">
+                    <label for="vegetaria">Racions d'arròs vegetarià</label>
+                    <div class="select-wrapper">
+                        <select id="vegetaria" name="vegetaria" required>
+                            <option value="0" selected>Cap (arròs estàndard per a tothom)</option>
+                            <option value="1">1 ració vegetariana</option>
+                            <option value="2">2 racions vegetarianes</option>
+                            <option value="3">3 racions vegetarianes</option>
+                            <option value="4">4 racions vegetarianes</option>
+                            <option value="5">5 racions vegetarianes</option>
+                            <option value="6">6 racions vegetarianes</option>
+                            <option value="7">7 racions vegetarianes</option>
+                            <option value="8">8 racions vegetarianes</option>
+                            <option value="9">9 racions vegetarianes</option>
+                            <option value="10">Totes (arròs vegetarià per a tothom)</option>
+                        </select>
+                    </div>
+                    <p class="vege-hint">Si algú del grup vol arròs vegetarià, indica aquí quantes racions.</p>
+                </div>
+
+                <div class="price-note">
+                    <strong>15 €</strong> per persona · Pagament en efectiu el mateix dia
+                </div>
+
+                <div class="bring-note">
+                    ⚠ Recorda portar <strong>plat, got i coberts</strong>
+                </div>
+
+                <button type="submit">Apuntar-m'hi!</button>
+            </form>
+        </div>
+
+        <footer>
+            <p>Assemblea Popular de les Valls d'Àneu &mdash; <a href="/" style="color:#c0281e;">assembleavallsdaneu.cat</a></p>
+        </footer>
+    </div>
+</body>
+</html>
