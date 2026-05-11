@@ -21,27 +21,14 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 3rem 1.5rem 2rem;
+    padding: 3rem 1.5rem 1rem;
 }
 
-.label-top {
-    display: inline-block;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1rem;
-    letter-spacing: 5px;
-    background: #1a1a1a;
-    color: #f5ede0;
-    padding: 4px 20px;
-    margin-bottom: 1rem;
-}
-
-h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(4rem, 18vw, 9rem);
-    line-height: 0.88;
-    color: #c0281e;
-    text-shadow: 5px 5px 0 #1a1a1a;
-    margin-bottom: 1.25rem;
+.logo {
+    width: clamp(160px, 30vw, 260px);
+    height: auto;
+    mix-blend-mode: multiply;
+    margin-bottom: 0.5rem;
 }
 
 .tagline {
