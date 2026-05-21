@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arrossada Popular – Inscripció | Assemblea Popular de les Valls d'Àneu</title>
+    <title>Arrossada Popular – 23 de Maig | Assemblea Popular de les Valls d'Àneu</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -79,6 +79,21 @@
 
         .event-info strong {
             font-size: 1.15rem;
+        }
+
+        /* ── Poster ── */
+        .poster-wrap {
+            background: #fff;
+            border: 3px solid #1a1a1a;
+            box-shadow: 6px 6px 0 #1a1a1a;
+            padding: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .poster {
+            display: block;
+            width: 100%;
+            height: auto;
         }
 
         /* ── Form card ── */
@@ -294,92 +309,8 @@
 <body>
     <div class="page-wrapper">
 
-        <header>
-            <div class="label-top">Assemblea Popular de les Valls d'Àneu</div>
-            <h1>ARROSSADA<br>POPULAR</h1>
-            <div class="subtitle">Firal d'Esterri &mdash; 23 de Maig</div>
-        </header>
-
-        <div class="event-info">
-            <p>
-                <strong>A partir de les 12:30h</strong><br>
-                Aperitiu · Arròs · Postres · Vi i Aigua<br>
-                <strong>15 € per persona &mdash; només efectiu</strong><br>
-                Vermut electrònic · Festa PD's
-            </p>
-        </div>
-
-        <div class="form-card">
-            <h2>Inscripció</h2>
-
-            <form name="arrossada" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/arrossada-ok.html">
-                <input type="hidden" name="form-name" value="arrossada" />
-                <p hidden><label>No omplir: <input name="bot-field" /></label></p>
-
-                <div class="form-group">
-                    <label for="nom">Nom i cognoms</label>
-                    <input type="text" id="nom" name="nom" placeholder="Pere Puig" required />
-                </div>
-
-                <div class="form-group">
-                    <label for="telefon">Telèfon de contacte</label>
-                    <input type="tel" id="telefon" name="telefon" placeholder="600 000 000" required />
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Correu electrònic</label>
-                    <input type="email" id="email" name="email" placeholder="nom@exemple.cat" required />
-                </div>
-
-                <div class="form-group">
-                    <label for="persones">Nombre de persones</label>
-                    <div class="select-wrapper">
-                        <select id="persones" name="persones" required>
-                            <option value="" disabled selected>Selecciona…</option>
-                            <option value="1">1 persona</option>
-                            <option value="2">2 persones</option>
-                            <option value="3">3 persones</option>
-                            <option value="4">4 persones</option>
-                            <option value="5">5 persones</option>
-                            <option value="6">6 persones</option>
-                            <option value="7">7 persones</option>
-                            <option value="8">8 persones</option>
-                            <option value="9">9 persones</option>
-                            <option value="10">10 persones</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="vege-box">
-                    <label for="vegetaria">Racions d'arròs vegetarià</label>
-                    <div class="select-wrapper">
-                        <select id="vegetaria" name="vegetaria" required>
-                            <option value="0" selected>Cap (arròs estàndard per a tothom)</option>
-                            <option value="1">1 ració vegetariana</option>
-                            <option value="2">2 racions vegetarianes</option>
-                            <option value="3">3 racions vegetarianes</option>
-                            <option value="4">4 racions vegetarianes</option>
-                            <option value="5">5 racions vegetarianes</option>
-                            <option value="6">6 racions vegetarianes</option>
-                            <option value="7">7 racions vegetarianes</option>
-                            <option value="8">8 racions vegetarianes</option>
-                            <option value="9">9 racions vegetarianes</option>
-                            <option value="10">Totes (arròs vegetarià per a tothom)</option>
-                        </select>
-                    </div>
-                    <p class="vege-hint">Si algú del grup vol arròs vegetarià, indica aquí quantes racions.</p>
-                </div>
-
-                <div class="price-note">
-                    <strong>15 €</strong> per persona · Pagament en efectiu el mateix dia
-                </div>
-
-                <div class="bring-note">
-                    ⚠ Recorda portar <strong>plat, got i coberts</strong>
-                </div>
-
-                <button type="submit">Apuntar-m'hi!</button>
-            </form>
+        <div class="poster-wrap">
+            <img src="arrossada-poster.jpg" alt="Cartell Arrossada Popular - 23 de Maig 2026 al Firal d'Esterri. Aperitiu, arròs de muntanya, postres, vi i aigua. 15€ adults, 10€ menors d'edat. Només efectiu. Cal portar de casa coberts, plats i got. A partir de les 12:30h amb vermut electrònic i festa amb els PD's Musgoo i Celofana." class="poster">
         </div>
 
         <footer>
